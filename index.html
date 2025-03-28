@@ -12,6 +12,48 @@
     <header>
         <h1>JSON-LD RDF Graph Visualizer</h1>
     </header>
+    <div class="app-content">
+        <div class="input-section">
+            <label class="section-heading" for="jsonld-input">
+                Paste your JSON‑LD document below to visualize it as an interactive RDF graph.
+            </label>
+            <div class="textarea-container">
+                <textarea id="jsonld-input" placeholder="Paste your JSON-LD document here..."></textarea>
+            </div>
+
+            <div class="button-container">
+                <div class="init-buttons">
+                    <button id="visualize-btn">Visualize</button>
+                    <button id="example-btn" class="example">Load Example</button>
+                    <button id="clear-btn" class="clear">Clear</button>
+                </div>
+                <div class="interact-buttons">
+                    <button id="expand-all-btn" class="secondary">Expand Level</button>
+                    <button id="collapse-all-btn" class="secondary">Collapse Level</button>
+                </div>
+            </div>
+        </div>
+        <div id="graph-container" class="graph-container"></div>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #3498db;"></div>
+                <span>RDF Subject or Object (IRIs, Literals)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #9b59b6;"></div>
+                <span>RDF Predicate (IRIs)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #f39c12;"></div>
+                <span>RDF Subject or Object (Blank Node)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="border: 2px dashed #3498db; background-color: white;"></div>
+                <span>Expandable Node</span>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
 </div>
 <script type="module" src="app.js"></script>
 </body>
