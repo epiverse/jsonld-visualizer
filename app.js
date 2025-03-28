@@ -5,6 +5,7 @@ const jsonldInput = document.getElementById('jsonld-input');
 const visualizeBtn = document.getElementById('visualize-btn');
 const exampleBtn = document.getElementById('example-btn');
 const clearBtn = document.getElementById('clear-btn');
+const recenterBtn = document.getElementById('recenter-btn');
 const expandLevelBtn = document.getElementById('expand-level-btn');
 const collapseLevelBtn = document.getElementById('collapse-level-btn');
 const messageBox = document.getElementById('message-box');
@@ -76,6 +77,8 @@ const options = {
 
 function initApp() {
     initNetwork();
+
+    recenterBtn.addEventListener('click', recenterGraph);
     visualizeBtn.addEventListener('click', handleVisualize);
     exampleBtn.addEventListener('click', loadExample);
     clearBtn.addEventListener('click', clearAll);
@@ -98,6 +101,7 @@ async function handleVisualize() {
         expandedNodes.clear();
         expandedMapping = {};
         await processJsonLd(jsonldData);
+        recenterBtn.click();
         showMessage('JSON-LD document visualized successfully');
     } catch (error) {
         console.error('Error processing JSON-LD:', error);
@@ -162,6 +166,14 @@ function animateLayout() {
     network.once("stabilized", () => {
         network.setOptions({physics: {enabled: false}});
     });
+}
+
+
+// Recenter the graph
+function recenterGraph() {
+    if (network) {
+        network.fit();
+    }
 }
 
 
