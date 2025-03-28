@@ -27,36 +27,41 @@
                     <button id="example-btn" class="example">Load Example</button>
                     <button id="clear-btn" class="clear">Clear</button>
                 </div>
-                <div class="recenter-button">
-                    <button id="recenter-btn" class="secondary">Re-center</button>
-                </div>
-                <div class="interact-buttons">
-                    <button id="expand-level-btn" class="secondary">Expand Level</button>
-                    <button id="collapse-level-btn" class="secondary">Collapse Level</button>
-                </div>
             </div>
 
             <div id="message-box" class="message"></div>
+
+            <hr class="divider">
+
+            <div class="legend">
+                <div class="interact-buttons">
+                    <button id="recenter-btn" class="secondary">Re-center</button>
+                    <button id="expand-level-btn" class="secondary">Expand Level</button>
+                    <button id="collapse-level-btn" class="secondary">Collapse Level</button>
+                </div>
+
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #3498db;"></div>
+                        <span>RDF Subject or Object (IRIs)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #9b59b6;"></div>
+                        <span>RDF Predicate (IRIs)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: #f39c12;"></div>
+                        <span>RDF Subject or Object (Literals, Blank Nodes)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="border: 2px dashed #3498db; background-color: white;"></div>
+                        <span>Expandable Node</span>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div id="graph-container" class="graph-container"></div>
-        <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: #3498db;"></div>
-                <span>RDF Subject or Object (IRIs)</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: #9b59b6;"></div>
-                <span>RDF Predicate (IRIs)</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="background-color: #f39c12;"></div>
-                <span>RDF Subject or Object (Literals, Blank Nodes)</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color" style="border: 2px dashed #3498db; background-color: white;"></div>
-                <span>Expandable Node</span>
-            </div>
-        </div>
     </div>
     <footer></footer>
 </div>
